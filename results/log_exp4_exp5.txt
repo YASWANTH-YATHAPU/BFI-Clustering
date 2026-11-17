@@ -1,0 +1,50 @@
+
+===== exp4_sensitivity =====
+seed=0 blobs_overlap done
+seed=0 varied_density done
+seed=0 blobs_hd8 done
+seed=0 iris done
+seed=1 blobs_overlap done
+seed=1 varied_density done
+seed=1 blobs_hd8 done
+seed=1 iris done
+seed=2 blobs_overlap done
+seed=2 varied_density done
+seed=2 blobs_hd8 done
+seed=2 iris done
+method         S1+S2  control  original
+param   value                          
+K1_frac 0.02   0.730    0.751     0.730
+        0.04   0.725    0.733     0.725
+        0.06   0.699    0.682     0.712
+        0.10   0.668    0.671     0.659
+        0.15   0.573    0.592     0.592
+K2      1.00   0.716    0.667     0.717
+        3.00   0.699    0.682     0.712
+        5.00   0.611    0.669     0.610
+        9.00   0.249    0.653     0.302
+        15.00  0.028    0.642     0.081
+zeta    0.00   0.699    0.682     0.712
+        0.05   0.699    0.682     0.712
+        0.10   0.699    0.682     0.712
+        0.20   0.699    0.682     0.712
+        0.30   0.699    0.682     0.712
+        0.50   0.699    0.682     0.712
+[exp4_sensitivity done in 154.2s]
+
+===== exp5_bel_adaptivity =====
+seed=0 varied_density done
+seed=0 blobs_overlap done
+seed=0 moons done
+seed=0 blobs_hd8 done
+seed=1 varied_density done
+seed=1 blobs_overlap done
+seed=1 moons done
+seed=1 blobs_hd8 done
+seed=2 varied_density done
+seed=2 blobs_overlap done
+seed=2 moons done
+seed=2 blobs_hd8 done
+[exp5_bel_adaptivity done in 8.1s]
+
+CSV -> results/   tables -> results/tables/   plots -> results/plots/

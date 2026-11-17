@@ -1,0 +1,102 @@
+
+===== exp1_quality =====
+moons            DPC (zeta=0)         t=0.084s mem=53.6MB ARI=1.000 Re=0.000 Ri=0.000
+moons            BFI original         t=0.087s mem=53.6MB ARI=1.000 Re=0.000 Ri=0.000
+moons            BFI fast (proposed)  t=0.069s mem=27.0MB ARI=1.000 Re=0.000 Ri=0.000
+circles          DPC (zeta=0)         t=0.084s mem=53.6MB ARI=-0.001 Re=0.499 Ri=0.000
+circles          BFI original         t=0.092s mem=53.5MB ARI=-0.001 Re=0.489 Ri=0.020
+circles          BFI fast (proposed)  t=0.072s mem=27.1MB ARI=0.007 Re=0.449 Ri=0.019
+blobs_separated  DPC (zeta=0)         t=0.082s mem=53.6MB ARI=0.980 Re=0.007 Ri=0.000
+blobs_separated  BFI original         t=0.086s mem=53.7MB ARI=0.980 Re=0.001 Ri=0.007
+blobs_separated  BFI fast (proposed)  t=0.069s mem=27.2MB ARI=0.980 Re=0.001 Ri=0.008
+blobs_overlap    DPC (zeta=0)         t=0.088s mem=53.7MB ARI=0.655 Re=0.129 Ri=0.000
+blobs_overlap    BFI original         t=0.085s mem=53.6MB ARI=0.655 Re=0.116 Ri=0.031
+blobs_overlap    BFI fast (proposed)  t=0.069s mem=27.1MB ARI=0.660 Re=0.113 Ri=0.037
+varied_density   DPC (zeta=0)         t=0.086s mem=53.7MB ARI=0.904 Re=0.033 Ri=0.000
+varied_density   BFI original         t=0.086s mem=53.6MB ARI=0.904 Re=0.026 Ri=0.015
+varied_density   BFI fast (proposed)  t=0.068s mem=26.9MB ARI=0.904 Re=0.026 Ri=0.015
+anisotropic      DPC (zeta=0)         t=0.091s mem=53.6MB ARI=0.998 Re=0.001 Ri=0.000
+anisotropic      BFI original         t=0.089s mem=53.6MB ARI=0.998 Re=0.000 Ri=0.002
+anisotropic      BFI fast (proposed)  t=0.069s mem=27.0MB ARI=0.998 Re=0.000 Ri=0.002
+iris             DPC (zeta=0)         t=0.004s mem=1.8MB ARI=0.694 Re=0.127 Ri=0.000
+iris             BFI original         t=0.004s mem=1.8MB ARI=0.694 Re=0.120 Ri=0.020
+iris             BFI fast (proposed)  t=0.009s mem=1.9MB ARI=0.694 Re=0.120 Ri=0.020
+wine             DPC (zeta=0)         t=0.006s mem=2.1MB ARI=0.443 Re=0.376 Ri=0.000
+wine             BFI original         t=0.005s mem=2.0MB ARI=0.443 Re=0.376 Ri=0.011
+wine             BFI fast (proposed)  t=0.012s mem=2.0MB ARI=0.443 Re=0.376 Ri=0.011
+breast_cancer    DPC (zeta=0)         t=0.025s mem=8.8MB ARI=0.002 Re=0.371 Ri=0.000
+breast_cancer    BFI original         t=0.024s mem=8.9MB ARI=0.002 Re=0.371 Ri=0.000
+breast_cancer    BFI fast (proposed)  t=0.051s mem=87.4MB ARI=0.002 Re=0.371 Ri=0.000
+digits6_pca10    DPC (zeta=0)         t=0.059s mem=28.9MB ARI=0.546 Re=0.394 Ri=0.000
+digits6_pca10    BFI original         t=0.055s mem=28.9MB ARI=0.546 Re=0.392 Ri=0.006
+digits6_pca10    BFI fast (proposed)  t=0.071s mem=19.0MB ARI=0.304 Re=0.557 Ri=0.006
+[exp1_quality done in 19.1s]
+
+===== exp2_scalability =====
+N=   500 {'original': (0.02, 7.1), 'fast': (0.04, 3.6)}
+N=  1000 {'original': (0.05, 25.0), 'fast': (0.08, 10.0)}
+N=  2000 {'original': (0.17, 93.8), 'fast': (0.12, 35.2)}
+N=  4000 {'original': (0.83, 366.8), 'fast': (0.2, 32.3)}
+N=  6000 {'original': (1.15, 824.9), 'fast': (0.34, 32.1)}
+N= 10000 {'fast': (0.52, 33.7)}
+N= 20000 {'fast': (1.24, 60.8)}
+N= 50000 {'fast': (4.32, 243.1)}
+[exp2_scalability done in 16.4s]
+
+===== exp3_ablation =====
+varied_density  exact mode (k_cand=K1, no sampling)           0.745s x0.9  agree=1.000 tv=0.000
+varied_density  proposed default (kc=64, tol=.5, s=1000)      0.188s x3.7  agree=0.992 tv=0.007
+varied_density  k_cand=16                                     0.264s x2.6  agree=0.705 tv=0.292
+varied_density  k_cand=32                                     0.201s x3.4  agree=0.989 tv=0.009
+varied_density  k_cand=64                                     0.182s x3.8  agree=0.992 tv=0.007
+varied_density  k_cand=128                                    0.222s x3.1  agree=0.995 tv=0.005
+varied_density  tol=0.1                                       0.284s x2.4  agree=0.996 tv=0.004
+varied_density  tol=0.25                                      0.227s x3.0  agree=0.994 tv=0.005
+varied_density  tol=0.5                                       0.184s x3.8  agree=0.992 tv=0.007
+varied_density  tol=1.0                                       0.173s x4.0  agree=0.994 tv=0.007
+varied_density  tol=inf                                       0.171s x4.0  agree=0.994 tv=0.007
+varied_density  theta_sample=100                              0.114s x6.1  agree=0.994 tv=0.007
+varied_density  theta_sample=300                              0.146s x4.7  agree=0.988 tv=0.010
+varied_density  theta_sample=1000                             0.192s x3.6  agree=0.992 tv=0.007
+varied_density  no tail model (truncate at k_cand)            0.186s x3.7  agree=0.991 tv=0.009
+varied_density  backend=sklearn                               0.199s x3.5  agree=0.992 tv=0.007
+blobs_overlap   exact mode (k_cand=K1, no sampling)           0.674s x1.0  agree=1.000 tv=0.000
+blobs_overlap   proposed default (kc=64, tol=.5, s=1000)      0.176s x3.9  agree=0.958 tv=0.040
+blobs_overlap   k_cand=16                                     0.250s x2.8  agree=0.679 tv=0.324
+blobs_overlap   k_cand=32                                     0.218s x3.2  agree=0.953 tv=0.049
+blobs_overlap   k_cand=64                                     0.189s x3.7  agree=0.958 tv=0.040
+blobs_overlap   k_cand=128                                    0.202s x3.4  agree=0.992 tv=0.011
+blobs_overlap   tol=0.1                                       0.261s x2.6  agree=0.980 tv=0.021
+blobs_overlap   tol=0.25                                      0.219s x3.2  agree=0.968 tv=0.031
+blobs_overlap   tol=0.5                                       0.171s x4.0  agree=0.958 tv=0.040
+blobs_overlap   tol=1.0                                       0.170s x4.1  agree=0.961 tv=0.038
+blobs_overlap   tol=inf                                       0.181s x3.8  agree=0.961 tv=0.038
+blobs_overlap   theta_sample=100                              0.124s x5.6  agree=0.966 tv=0.037
+blobs_overlap   theta_sample=300                              0.135s x5.1  agree=0.950 tv=0.050
+blobs_overlap   theta_sample=1000                             0.178s x3.9  agree=0.958 tv=0.040
+blobs_overlap   no tail model (truncate at k_cand)            0.217s x3.2  agree=0.895 tv=0.106
+blobs_overlap   backend=sklearn                               0.181s x3.8  agree=0.958 tv=0.040
+[exp3_ablation done in 26.3s]
+
+===== exp4_sensitivity =====
+                 ARI     Re     Ri
+param   value                     
+K1_frac 0.02   0.639  0.139  0.024
+        0.04   0.661  0.126  0.028
+        0.06   0.753  0.086  0.024
+        0.10   0.693  0.152  0.025
+        0.15   0.632  0.191  0.023
+K2      1.00   0.754  0.095  0.000
+        3.00   0.753  0.086  0.024
+        5.00   0.642  0.225  0.024
+        9.00   0.185  0.512  0.039
+        15.00  0.185  0.503  0.049
+zeta    0.00   0.753  0.096  0.000
+        0.05   0.753  0.092  0.009
+        0.10   0.753  0.086  0.024
+        0.20   0.753  0.083  0.036
+        0.30   0.753  0.081  0.041
+        0.50   0.753  0.081  0.049
+[exp4_sensitivity done in 4.1s]
+
+CSV tables -> results/   figures -> results/figures/

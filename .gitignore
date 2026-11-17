@@ -1,0 +1,20 @@
+# Python environment and caches (each person runs: pip install -r requirements.txt)
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editor / tool folders
+.claude/
+
+# Generated build files
+paper/_eq/
+paper_overleaf.zip
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Scratch log of an early quick run
+results/_exp1_quick.log

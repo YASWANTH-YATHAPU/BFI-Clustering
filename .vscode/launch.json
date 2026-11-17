@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name": "LIVE Solution 2 visualisation (S2)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/visualize_s2.py", "console": "integratedTerminal",
+     "env": {"PYTHONPATH": "${workspaceFolder}"}},
+    {"name": "LIVE Solution 2 visualisation (S1+S2)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/visualize_s2.py", "args": ["--variant", "S1+S2"],
+     "console": "integratedTerminal", "env": {"PYTHONPATH": "${workspaceFolder}"}},
+    {"name": "LIVE Solution 1 visualisation (S1)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/visualize_s1.py", "console": "integratedTerminal",
+     "env": {"PYTHONPATH": "${workspaceFolder}"}},
+    {"name": "LIVE Solution 1 visualisation (S1+S2, exact)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/visualize_s1.py", "args": ["--variant", "S1+S2"],
+     "console": "integratedTerminal", "env": {"PYTHONPATH": "${workspaceFolder}"}},
+    {"name": "Demo (main.py)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/main.py", "console": "integratedTerminal",
+     "env": {"PYTHONPATH": "${workspaceFolder}"}},
+    {"name": "Run ALL experiments (quick)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/run_all.py", "args": ["--quick"],
+     "console": "integratedTerminal", "env": {"PYTHONPATH": "${workspaceFolder}"}},
+    {"name": "Run ALL experiments (full)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/run_all.py", "console": "integratedTerminal",
+     "env": {"PYTHONPATH": "${workspaceFolder}"}}
+  ]
+}
